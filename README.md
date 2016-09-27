@@ -1,14 +1,9 @@
 # index.html
 
 
+<a href="https://rawgit.com/IggyRekter/photon/master/index.html">rawgit</a><br>
 
-link to rawgit
-
-https://rawgit.com/IggyRekter/photon/master/index.html
-
-photon thingy
-
-https://iggyrekter.github.io/photon/
+<a href="https://iggyrekter.github.io/photon/">photon</a><br>
 
 webpage
 
