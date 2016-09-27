@@ -5,7 +5,4 @@
 
 <a href="https://iggyrekter.github.io/photon/">photon</a><br>
 
-webpage
-
-<a href="file:///H:/Documents/Robotics-2016/webpage-iggy.html">my webpage</a><br>
-
+<a href="webpage.html">my webpage</a><br>
