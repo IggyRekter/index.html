@@ -1,0 +1,103 @@
+void setup()
+{
+  
+    pinMode(D7, OUTPUT);  
+    pinMode(D6, INPUT_PULLDOWN);  
+
+  
+    pinMode(D0, OUTPUT);  // stepper motors need 4 digital PINS
+    pinMode(D1, OUTPUT);
+    pinMode(D2, OUTPUT);
+    pinMode(D3, OUTPUT);
+  
+  
+  
+}
+
+
+void loop()
+{
+
+   // try a stepper motor
+   if (digitalRead(D6) == 1){
+       myCounterClockwise(50);   // longer delay slower
+   } else {
+      myStepStop();
+   }
+}
+
+
+
+
+
+void myClockwise(int myDelay){
+    
+    digitalWrite(D0,1);   //power D0
+    digitalWrite(D1,0);
+    digitalWrite(D2,0);
+    digitalWrite(D3,0);
+    delay(myDelay);
+    
+    digitalWrite(D0,0);
+    digitalWrite(D1,0);   
+    digitalWrite(D2,1);    //power D2
+    digitalWrite(D3,0);
+    delay(myDelay);
+    
+    digitalWrite(D0,1);    //power D0 inverse
+    digitalWrite(D1,1);
+    digitalWrite(D2,0);  
+    digitalWrite(D3,0);
+    delay(myDelay);
+    
+    digitalWrite(D0,0);
+    digitalWrite(D1,0);
+    digitalWrite(D2,1);   //power D2 inverse
+    digitalWrite(D3,1);  
+    delay(myDelay);
+    
+}
+
+
+void myCounterClockwise(int myDelay){
+   
+    digitalWrite(D0,0);
+    digitalWrite(D1,0);
+    digitalWrite(D2,1);   //power D2 inverse
+    digitalWrite(D3,1);  
+    delay(myDelay);
+    
+    digitalWrite(D0,1);    //power D0 inverse
+    digitalWrite(D1,1);
+    digitalWrite(D2,0);  
+    digitalWrite(D3,0);
+    delay(myDelay);
+     
+    digitalWrite(D0,0);
+    digitalWrite(D1,0);   
+    digitalWrite(D2,1);    //power D2
+    digitalWrite(D3,0);
+    delay(myDelay);
+    
+    digitalWrite(D0,1);   //power D0
+    digitalWrite(D1,0);
+    digitalWrite(D2,0);
+    digitalWrite(D3,0);
+    delay(myDelay);
+
+}  
+    
+ 
+
+void myStepStop(){
+    
+    digitalWrite(D0,0);   
+    digitalWrite(D1,0);
+    digitalWrite(D2,0);
+    digitalWrite(D3,0);
+
+}
+
+
+
+
